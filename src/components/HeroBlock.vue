@@ -6,12 +6,14 @@
         src="@icons/logo.svg"
         alt="Надпись logoipsum на синем фоне"
       >
-      <span class="hero__company-name">
-        Conecom
-      </span>
-      <h1 class="hero__text">
-        российское подразделение французской группы DuffBeer
-      </h1>
+      <div class="hero__text">
+        <span class="hero__text-name">
+          Conecom
+        </span>
+        <h1 class="hero__text-description">
+          российское подразделение французской группы DuffBeer
+        </h1>
+      </div>
     </div>
   </header>
 </template>
@@ -22,7 +24,6 @@
 @use '@vars/colors';
 
 .hero {
-  color: colors.$white;
   background-color: colors.$brown;
   background-image: url('@images/hero@1x.jpg');
   background-image: image-set(
@@ -35,57 +36,44 @@
   background-repeat: no-repeat;
 
   &__container {
-    position: relative;
+    min-height: clamp(pxToRem(315), 65vw, pxToRem(600));
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
 
     @media (min-width: calc($mobile + 1px)) {
-      height: pxToRem(600);
+      align-items: flex-start;
     }
     @media (max-width: $mobile) {
-      height: pxToRem(315);
       text-align: center;
       align-items: center;
     }
   }
 
-  &__logo {
-    position: absolute;
-    top: 0;
-    @media (min-width: calc($mobile + 1px)) {
-      width: 267px;
-      left: 60px;
-    }
-    @media (max-width: $mobile) {
-      width: 167px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
+  $logo-height: clamp(4rem, 12vw, 6.5rem);
 
-  &__company-name {
-    text-transform: uppercase;
-    @media (min-width: calc($mobile + 1px)) {
-      font-size: 72px;
-    }
-    @media (max-width: $mobile) {
-      font-size: clamp(24px, 7vw, 36px);
-    }
+  &__logo {
+    height: $logo-height;
   }
 
   &__text {
-    @media (min-width: calc($mobile + 1px)) {
-      font-size: 26px;
-      line-height: 36px;
-      max-width: 550px;
+    color: colors.$white;
+    line-height: 1.35;
+
+    max-width: clamp(20rem, 60vw, 35rem);
+    padding-bottom: $logo-height;
+    margin-block: auto;
+
+    display: grid;
+    gap: 1rem;
+
+    &-name {
+      font-size: clamp(24px, 7vw, 72px);
+      text-transform: uppercase;
     }
-    @media (max-width: $mobile) {
-      font-size: 16px;
-      line-height: 20px;
-      max-width: 350px;
+
+    &-description {
+      font-size: clamp(16px, 3.5vw, 26px);
     }
   }
 }
