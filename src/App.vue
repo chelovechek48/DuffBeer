@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <AppHero />
+    <HeroBlock />
   </div>
 </template>
 
