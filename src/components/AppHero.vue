@@ -6,12 +6,12 @@
         src="@icons/logo.svg"
         alt=""
       >
-      <h1 class="hero__title">
+      <span class="hero__company-name">
         Conecom
-      </h1>
-      <p class="hero__paragraph">
+      </span>
+      <h1 class="hero__text">
         российское подразделение французской группы DuffBeer
-      </p>
+      </h1>
     </div>
   </header>
 </template>
@@ -60,7 +60,7 @@
     }
   }
 
-  &__title {
+  &__company-name {
     text-transform: uppercase;
     @media (min-width: calc($mobile + 1px)) {
       font-size: 72px;
@@ -70,7 +70,7 @@
     }
   }
 
-  &__paragraph {
+  &__text {
     @media (min-width: calc($mobile + 1px)) {
       font-size: 26px;
       line-height: 36px;
