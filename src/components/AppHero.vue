@@ -4,7 +4,7 @@
       <img
         class="hero__logo"
         src="@icons/logo.svg"
-        alt=""
+        alt="Надпись logoipsum на синем фоне"
       >
       <span class="hero__company-name">
         Conecom
