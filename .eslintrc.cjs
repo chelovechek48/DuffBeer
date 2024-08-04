@@ -18,6 +18,7 @@ module.exports = {
         map: [
           ['@images', './src/assets/images'],
           ['@styles', './src/styles'],
+          ['@vars', './src/styles/vars'],
         ],
       },
     },

@@ -1,0 +1,5 @@
+@use '@vars/functions' as *;
+
+$laptop: #{pxToRem(1340)};
+$tablet: #{pxToRem(1020)};
+$mobile: #{pxToRem(700)};

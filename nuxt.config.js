@@ -28,5 +28,6 @@ export default {
   alias: {
     '@images': setAlias('./src/assets/images'),
     '@styles': setAlias('./src/styles'),
+    '@vars': setAlias('./src/styles/vars'),
   },
 };
