@@ -1,28 +1,28 @@
 <template>
-  <section class="description container">
+  <section class="about container">
     <iframe
-      class="description__video description__group"
+      class="about__video about__group"
       src="https://www.youtube.com/embed/C8PUlZrngZQ"
       title="Процесс приготовления хлеба на закваске"
       frameborder="0"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
     />
-    <div class="description__text description__group">
-      <div class="description__count">
-        <span class="description__count-number">
+    <div class="about__text about__group">
+      <div class="about__count">
+        <span class="about__count-number">
           167
         </span>
-        <span class="description__count-label">
+        <span class="about__count-label">
           лет нашего опыта
         </span>
       </div>
-      <p class="description__paragraph">
+      <p class="about__paragraph">
         DuffBeer — один из мировых лидеров по производству дрожжей и других продуктов ферментации.
         И нам нужна сильная команда профессионалов и единомышленников,
         которые будут стремитьсяразвиваться вместе с DuffBeer.
       </p>
-      <p class="description__paragraph">
+      <p class="about__paragraph">
         Мы всегда рады принять талантливых и целеустремленных людей в нашу дружную команду!
         Мы ценим каждого своего сотрудника и стремимся предоставить
         всем равные возможности в развитии и совершенств.
@@ -35,7 +35,7 @@
 @use '@vars/breakpoints' as *;
 @use '@vars/colors';
 
-.description {
+.about {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap-reverse;

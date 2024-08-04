@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <HeroBlock />
-    <DescriptionBlock />
+    <AboutBlock />
     <FactBlock />
   </div>
 </template>
