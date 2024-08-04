@@ -23,7 +23,13 @@
 
 .hero {
   color: colors.$white;
-  background-image: url('@images/hero-unoptimized@1x.jpg');
+  background-color: colors.$brown;
+  background-image: url('@images/hero@1x.jpg');
+  background-image: image-set(
+    url('@images/hero@1x.avif') type('image/avif'),
+    url('@images/hero@1x.webp') type('image/webp'),
+    url('@images/hero@1x.jpg') type('image/jpg')
+  );
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
