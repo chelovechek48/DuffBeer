@@ -17,6 +17,7 @@ module.exports = {
       alias: {
         map: [
           ['@images', './src/assets/images'],
+          ['@icons', './src/assets/icons'],
           ['@styles', './src/styles'],
           ['@vars', './src/styles/vars'],
         ],

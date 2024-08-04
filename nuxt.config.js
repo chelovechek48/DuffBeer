@@ -27,6 +27,7 @@ export default {
 
   alias: {
     '@images': setAlias('./src/assets/images'),
+    '@icons': setAlias('./src/assets/icons'),
     '@styles': setAlias('./src/styles'),
     '@vars': setAlias('./src/styles/vars'),
   },
