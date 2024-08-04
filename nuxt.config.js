@@ -12,7 +12,7 @@ export default {
     baseURL: '/DuffBeer',
     lang: 'ru',
     head: {
-      title: 'Шаблон',
+      title: 'Conecom - DuffBeer',
       charset: 'UTF-8',
       viewport: 'width=device-width, initial-scale=1.0',
     },
