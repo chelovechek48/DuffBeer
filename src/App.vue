@@ -2,6 +2,7 @@
   <div class="page">
     <HeroBlock />
     <DescriptionBlock />
+    <FactBlock />
   </div>
 </template>
 
