@@ -1,20 +1,21 @@
 <template>
   <section class="description container">
     <iframe
-      class="description__video"
+      class="description__video description__group"
       src="https://www.youtube.com/embed/C8PUlZrngZQ"
-      title="Artisan Sourdough Bread Process from Start to Finish | Proof Bread"
+      title="Процесс приготовления хлеба на закваске"
+      frameborder="0"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
     />
-    <div class="description__text">
+    <div class="description__text description__group">
       <div class="description__count">
-        <div class="description__count-number">
+        <span class="description__count-number">
           167
-        </div>
-        <div class="description__count-text">
+        </span>
+        <span class="description__count-label">
           лет нашего опыта
-        </div>
+        </span>
       </div>
       <p class="description__paragraph">
         DuffBeer — один из мировых лидеров по производству дрожжей и других продуктов ферментации.
@@ -36,36 +37,23 @@
 
 .description {
   display: flex;
-  flex-wrap: wrap-reverse;
   align-items: flex-end;
-  justify-content: center;
-  gap: 40px;
+  flex-wrap: wrap-reverse;
+  gap: clamp(24px, 4vw, 40px);
 
-  @media (min-width: calc($tablet + 1px)) {
-    padding-block: 100px;
-  }
-  @media (max-width: $tablet) and (min-width: calc($mobile + 1px)) {
-    padding-block: 80px;
-  }
-  @media (max-width: $mobile) {
-    padding-block: 60px;
-  }
+  padding-block: clamp(4rem, 7vw, 6rem);
 
-  &__video,
-  &__text {
-    flex: 1 1 400px;
+  &__group {
+    flex: 1 1 25rem;
   }
 
   &__video {
-    $margin: 35px;
+    $margin: clamp(1rem, 4vw, 2rem);
 
+    width: 100%;
     aspect-ratio: 16 / 9;
-    margin-top: $margin;
     box-shadow: calc(0px - $margin) calc(0px - $margin) 0 0 colors.$beige;
-
-    @media (max-width: $mobile) {
-      margin-left: $margin;
-    }
+    margin-top: $margin;
   }
 
   &__text {
@@ -76,46 +64,32 @@
 
   &__count {
     display: flex;
-    flex-direction: column;
-    @media (min-width: calc($mobile + 1px)) {
-      gap: 20px;
-    }
-    @media (max-width: $mobile) {
-      gap: 12px;
-    }
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.75rem;
 
     &-number {
       color: colors.$brown;
+      font-size: clamp(42px, 6.5vw, 96px);
       font-weight: 900;
-      line-height: 1;
-
-      @media (min-width: calc($mobile + 1px)) {
-        font-size: 96px;
-      }
-      @media (max-width: $mobile) {
-        font-size: 42px;
-      }
+      line-height: 0.9;
     }
 
-    &-text {
+    &-label {
       color: colors.$blue;
+      font-size: clamp(16px, 7vw, 24px);
       font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      line-height: 1;
 
-      @media (min-width: calc($mobile + 1px)) {
-        font-size: 18px;
-      }
-      @media (max-width: $mobile) {
-        font-size: 12px;
-      }
+      text-transform: uppercase;
+      white-space: nowrap;
     }
   }
 
   &__paragraph {
     color: colors.$brown-dark;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 1.6;
   }
 }
 </style>
