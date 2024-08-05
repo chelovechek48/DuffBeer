@@ -20,6 +20,14 @@
 .mission {
   padding-block: clamp(4rem, 7vw, 6rem);
   background-color: colors.$brown;
+  background-image: url('@images/mission@1x.jpg');
+  background-image: image-set(
+    url('@images/mission@1x.avif') type('image/avif'),
+    url('@images/mission@1x.jpg') type('image/jpg')
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   color: colors.$white;
   text-align: center;
