@@ -21,7 +21,7 @@
 .fact {
   color: colors.$white;
   background-color: colors.$blue;
-  padding-block: clamp(1rem, 5vw, 5.5rem);
+  padding-block: clamp(1rem, 5vw, 4rem);
 
   &__container {
     display: flex;
