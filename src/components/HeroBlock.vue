@@ -68,12 +68,12 @@
     gap: 1rem;
 
     &-name {
-      font-size: clamp(24px, 7vw, 72px);
+      font-size: clamp(1.5rem, 7vw, 4.5rem);
       text-transform: uppercase;
     }
 
     &-description {
-      font-size: clamp(16px, 3.5vw, 26px);
+      font-size: clamp(1rem, 3.5vw, pxToRem(26));
     }
   }
 }

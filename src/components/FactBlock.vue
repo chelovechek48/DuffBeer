@@ -39,7 +39,7 @@
   }
 
   &__paragraph {
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
     line-height: 1.35;
   }
 }

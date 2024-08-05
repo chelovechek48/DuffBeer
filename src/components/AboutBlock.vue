@@ -39,7 +39,7 @@
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap-reverse;
-  gap: clamp(24px, 4vw, 40px);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
 
   padding-block: clamp(4rem, 7vw, 6rem);
 
@@ -66,7 +66,7 @@
   &__text {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   &__count {
@@ -77,14 +77,14 @@
 
     &-number {
       color: colors.$brown;
-      font-size: clamp(42px, 6.5vw, 96px);
+      font-size: clamp(2.5rem, 6.5vw, 6rem);
       font-weight: 900;
       line-height: 0.9;
     }
 
     &-label {
       color: colors.$blue;
-      font-size: clamp(16px, 7vw, 24px);
+      font-size: clamp(1rem, 7vw, 1.5rem);
       font-weight: 700;
       line-height: 1;
 
@@ -95,7 +95,7 @@
 
   &__paragraph {
     color: colors.$brown-dark;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.6;
   }
 }
