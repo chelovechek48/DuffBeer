@@ -50,10 +50,17 @@
   &__video {
     $margin: clamp(1rem, 4vw, 2rem);
 
-    width: 100%;
     aspect-ratio: 16 / 9;
     box-shadow: calc(0px - $margin) calc(0px - $margin) 0 0 colors.$beige;
     margin-top: $margin;
+
+    @media (min-width: calc($mobile + 1px)) {
+      width: 100%;
+    }
+    @media (max-width: $mobile) {
+      width: calc(100% - $margin);
+      margin-left: $margin;
+    }
   }
 
   &__text {

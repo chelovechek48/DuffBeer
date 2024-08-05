@@ -28,7 +28,11 @@
 </style>
 
 <style lang="scss" scoped>
+@use '@vars/breakpoints' as *;
+
 .page {
-  padding: 15px;
+  @media (min-width: calc($mobile + 1px)) {
+    padding: 1rem;
+  }
 }
 </style>
