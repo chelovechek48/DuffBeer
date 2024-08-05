@@ -30,5 +30,6 @@ export default {
     '@icons': setAlias('./src/assets/icons'),
     '@styles': setAlias('./src/styles'),
     '@vars': setAlias('./src/styles/vars'),
+    '@json': setAlias('./src/assets/json'),
   },
 };
