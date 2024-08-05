@@ -4,7 +4,8 @@
       <img
         class="fact__icon"
         src="@icons/arrow.svg"
-        alt=""
+        alt="стрелочка"
+        aria-hidden="true"
       >
       <p class="fact__paragraph">
         Каждое 3-е хлебобулочное изделие в мире произведено с использованием продукции DuffBeer
