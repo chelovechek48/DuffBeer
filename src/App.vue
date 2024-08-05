@@ -3,6 +3,7 @@
     <HeroBlock />
     <AboutBlock />
     <FactBlock />
+    <MissionBlock />
   </div>
 </template>
 
