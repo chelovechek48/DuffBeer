@@ -20,18 +20,21 @@
 .fact {
   color: colors.$white;
   background-color: colors.$blue;
-  padding-block: clamp(1rem, 0vw, 94px);
+  padding-block: clamp(1rem, 5vw, 5.5rem);
 
   &__container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1.5rem, 5vw, 2rem);
   }
 
   &__icon {
-    min-width: 3rem;
-    min-width: 1.5rem;
-    display: none;
+    @media (min-width: calc(25rem + 1px)) {
+      height: clamp(2.5rem, 5vw, 4rem);
+    }
+    @media (max-width: 25rem) {
+      display: none;
+    }
   }
 
   &__paragraph {
