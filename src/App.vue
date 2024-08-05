@@ -4,6 +4,7 @@
     <AboutBlock />
     <FactBlock />
     <MissionBlock />
+    <FeaturesBlock />
   </div>
 </template>
 
