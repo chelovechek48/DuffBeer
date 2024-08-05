@@ -1,19 +1,20 @@
+<script setup>
+import jsonnn from '@json/features.json';
+</script>
+
 <template>
   <section class="features">
     <div class="features__container container">
       <h2 class="features__title">
         Наши преимущества
       </h2>
-      <ul
-        class="features__list"
-        ref="slider"
-      >
+      <ul class="features__list">
         <li
           class="features__item"
-          v-for="item in [1,1,1,1,1,1,1,1,1,1]"
-          :key="item"
+          v-for="item in jsonnn"
+          :key="item.title"
         >
-          123
+          {{ item.title }}
         </li>
       </ul>
     </div>
@@ -43,7 +44,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width: $mobile) {
-      width: 100%;
       display: flex;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
@@ -56,8 +56,9 @@
     height: 10rem;
 
     @media (max-width: $mobile) {
-      min-width: 50%;
+      flex: 0 0 100%;
       scroll-snap-align: start;
+      scroll-snap-stop: always;
     }
   }
 }
