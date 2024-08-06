@@ -72,6 +72,10 @@ onMounted(() => {
 
   &__item {
     --feature-image-height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+
     @media (max-width: $mobile) {
       flex: 0 0 100%;
       scroll-snap-align: start;
@@ -79,25 +83,62 @@ onMounted(() => {
     }
   }
 
+  $accordion-padding-bottom: 4rem;
   &__accordion {
-    position: relative;
-    color: colors.$white;
+    flex: 1 1 0;
+
     background-color: colors.$blue;
+    color: colors.$white;
+
+    font-size: 1.25rem;
+    word-break: break-word;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+
+    $padding: 1rem;
+    $width: calc($accordion-padding-bottom - $padding * 2);
+    $height: 2px;
+
+    &[open] {
+      &::before, &::after {
+        rotate: 45deg;
+      }
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      bottom: $padding;
+      right: $padding;
+      background-color: white;
+      transition: rotate 300ms ease;
+    }
+    &::before {
+      width: $height;
+      height: $width;
+      translate: calc(0px - $width / 2 + 50%) 0;
+    }
+    &::after {
+      width: $width;
+      height: $height;
+      translate: 0 calc(0px - $width / 2 + 50%);
+    }
   }
 
   &__button {
-    font-size: 1.25rem;
-    padding-bottom: 3rem
+    padding: 1rem;
+    padding-bottom: $accordion-padding-bottom;
   }
   &__description {
+    padding: 1rem;
     position: absolute;
-    inset: 0 0 3rem 0;
-    font-size: 1.25rem;
+    inset: 0 0 $accordion-padding-bottom 0;
     overflow-y: auto;
+    overflow-x: hidden;
     background-color: colors.$blue;
   }
 

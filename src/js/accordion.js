@@ -1,7 +1,11 @@
 class Accordion {
   constructor(accordionDOM) {
     this.accordion = accordionDOM;
-    this.accordion.addEventListener('click', (event) => this.onClick(event));
+    this.accordion.addEventListener('click', (event) => {
+      if (event.target.tagName !== 'ASIDE') {
+        this.onClick(event);
+      }
+    });
 
     this.color = this.accordion.style.color;
     this.margin = '10rem';
