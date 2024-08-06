@@ -10,16 +10,25 @@ class Accordion {
     this.animation = null;
     this.durationH = 350;
     this.durationC = 350;
+
+    this.disabled = false;
   }
 
   onClick(event) {
     event.preventDefault();
 
-    const accordionIsOpen = this.accordion.open;
-    if (accordionIsOpen) {
-      window.requestAnimationFrame(() => this.closeAccordion());
-    } else {
-      window.requestAnimationFrame(() => this.openAccordion());
+    if (!this.disabled) {
+      const accordionIsOpen = this.accordion.open;
+      if (accordionIsOpen) {
+        window.requestAnimationFrame(() => this.closeAccordion());
+      } else {
+        window.requestAnimationFrame(() => this.openAccordion());
+      }
+
+      this.disabled = true;
+      setTimeout(() => {
+        this.disabled = false;
+      }, this.durationH);
     }
   }
 
