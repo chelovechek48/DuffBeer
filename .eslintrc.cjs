@@ -21,6 +21,7 @@ module.exports = {
           ['@styles', './src/styles'],
           ['@vars', './src/styles/vars'],
           ['@json', './src/assets/json'],
+          ['@js', './src/js'],
         ],
       },
     },

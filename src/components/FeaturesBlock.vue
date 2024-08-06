@@ -1,5 +1,14 @@
 <script setup>
 import jsonnn from '@json/features.json';
+import Accordion from '@js/accordion.js';
+
+const accordionList = ref(null);
+
+onMounted(() => {
+  accordionList.value.forEach((accordionDOM) => {
+    new Accordion(accordionDOM);
+  });
+});
 </script>
 
 <template>
@@ -14,7 +23,18 @@ import jsonnn from '@json/features.json';
           v-for="item in jsonnn"
           :key="item.title"
         >
-          {{ item.title }}
+          <div class="features__block" />
+          <details
+            class="features__accordion"
+            ref="accordionList"
+          >
+            <summary class="features__button">
+              {{ item.title }}
+            </summary>
+            <aside class="features__description">
+              {{ item.description }}
+            </aside>
+          </details>
         </li>
       </ul>
     </div>
@@ -36,7 +56,6 @@ import jsonnn from '@json/features.json';
 
   &__list {
     margin-top: 3rem;
-
     gap: 2rem;
 
     @media (min-width: calc($mobile + 1px)) {
@@ -51,15 +70,40 @@ import jsonnn from '@json/features.json';
   }
 
   &__item {
-    color: colors.$white;
-    background-color: colors.$blue;
-    height: 10rem;
-
     @media (max-width: $mobile) {
       flex: 0 0 100%;
       scroll-snap-align: start;
       scroll-snap-stop: always;
     }
+  }
+
+  &__accordion {
+    position: relative;
+    color: colors.$white;
+    background-color: colors.$blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    font-size: 1.25rem;
+    padding-bottom: 3rem
+  }
+  &__description {
+    position: absolute;
+    inset: 0 0 3rem 0;
+    font-size: 1.25rem;
+    overflow-y: auto;
+    background-color: colors.$blue;
+  }
+
+  --feature-image-height: 10rem;
+
+  &__block {
+    height: var(--feature-image-height);
+    background-color: red;
   }
 }
 </style>

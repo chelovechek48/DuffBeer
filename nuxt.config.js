@@ -31,5 +31,6 @@ export default {
     '@styles': setAlias('./src/styles'),
     '@vars': setAlias('./src/styles/vars'),
     '@json': setAlias('./src/assets/json'),
+    '@js': setAlias('./src/js'),
   },
 };
