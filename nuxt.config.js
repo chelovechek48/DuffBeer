@@ -10,11 +10,11 @@ export default {
   srcDir: './src',
   app: {
     baseURL: '/DuffBeer',
-    lang: 'ru',
     head: {
       title: 'Conecom - DuffBeer',
       charset: 'UTF-8',
       viewport: 'width=device-width, initial-scale=1.0',
+      htmlAttrs: { lang: 'ru' },
     },
   },
 
