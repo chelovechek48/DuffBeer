@@ -71,6 +71,7 @@ onMounted(() => {
   }
 
   &__item {
+    --feature-image-height: 10rem;
     @media (max-width: $mobile) {
       flex: 0 0 100%;
       scroll-snap-align: start;
@@ -99,8 +100,6 @@ onMounted(() => {
     overflow-y: auto;
     background-color: colors.$blue;
   }
-
-  --feature-image-height: 10rem;
 
   &__block {
     height: var(--feature-image-height);
