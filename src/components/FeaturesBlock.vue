@@ -1,3 +1,4 @@
+<!-- eslint-disable no-undef -->
 <script setup>
 import jsonnn from '@json/features.json';
 import Accordion from '@js/accordion.js';

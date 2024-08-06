@@ -10,6 +10,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  rules: {
+    'no-new': 'off',
+  },
   overrides: [{ files: ['**/*.js', '**/*.vue'] }],
   plugins: ['import', 'vue'],
   settings: {
